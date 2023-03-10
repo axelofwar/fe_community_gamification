@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:8000/api/Tweet/");
+        const response = await axios.get("http://localhost:8000/api/leaderboard/");
         setData(response.data);
       } catch (error) {
         console.error(error);
