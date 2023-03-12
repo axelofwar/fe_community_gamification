@@ -32,6 +32,8 @@ function App() {
             <th>Retweets</th>
             <th>Replies</th>
             <th>Impressions</th>
+            <th>Rank</th>
+            <th>Global Reach</th>
           </tr>
         </thead>
         <tbody>
@@ -43,6 +45,8 @@ function App() {
               <td>{item.Retweets}</td>
               <td>{item.Replies}</td>
               <td>{item.Impressions}</td>
+              <td>{item.Rank}</td>
+              <td>{item.Global_Reach.toFixed(3)}</td>
             </tr>
           ))}
         </tbody>
