@@ -1,14 +1,19 @@
 import './App.css'
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
+// import dotenv from 'dotenv';
+// dotenv.config();
+// const host = process.env.DATABASE_HOST
+// const database_api = process.env.LEADERBOARD_ENDPOINT
 
 function App() {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:8000/api/leaderboard/");
+        // const response = await axios.get("http://localhost:8000/api/leaderboard/");
+        const response = await axios.get("https://be-community-gamification.onrender.com/api/leaderboard/")
+        // const response = axios.get("https://"+host + database_api);
         setData(response.data);
       } catch (error) {
         console.error(error);
@@ -37,7 +42,7 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {data && data.map((item) => (
             <tr key={item.index}>
               {/* <td>{item.index}</td> */}
               <td>{item.Name}</td>
@@ -46,7 +51,7 @@ function App() {
               <td>{item.Replies}</td>
               <td>{item.Impressions}</td>
               <td>{item.Rank}</td>
-              <td>{item.Global_Reach.toFixed(3)}</td>
+              <td>{item.Global_Reach+"%"}</td>
             </tr>
           ))}
         </tbody>
