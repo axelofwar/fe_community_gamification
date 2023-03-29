@@ -3,6 +3,7 @@ import './App.css'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import React, { useState, useEffect } from "react";
+import '@fontsource/roboto/500.css';
 
 
 function App() {
@@ -77,38 +78,4 @@ function App() {
 }
 
 export default App;
-//     <div className="container">
-//       <img className="logo" src="/y00ts-logo.svg" alt="Y00TS Colors" />
-//       <h2 className="title">Leaderboard</h2>
-//       <img className="leaderboard" src="/y00ts-colors.png" alt="Yoots Logo" />
-//       <table className="table">
-//         <thead>
-//           <tr>
-//             <th>Name</th>
-//             <th>Favorites</th>
-//             <th>Retweets</th>
-//             <th>Replies</th>
-//             <th>Impressions</th>
-//             <th>Rank</th>
-//             <th>Global Reach</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {data && data.map((item) => (
-//             <tr key={item.index}>
-//               <td>{item.Name}</td>
-//               <td>{item.Favorites}</td>
-//               <td>{item.Retweets}</td>
-//               <td>{item.Replies}</td>
-//               <td>{item.Impressions}</td>
-//               <td>{item.Rank}</td>
-//               <td>{item.Global_Reach + "%"}</td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// }
 
-// export default App;
