@@ -114,7 +114,8 @@ img.logo {
   }
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 /* .container {

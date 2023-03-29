@@ -2,6 +2,7 @@ import './App.css'
 // import axios from 'axios';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Avatar from '@mui/material/Avatar';
 import React, { useState, useEffect } from "react";
 import '@fontsource/roboto/500.css';
 
@@ -60,7 +61,10 @@ function App() {
                   </IconButton>
                 </TableCell>
                 <TableCell component="th" scope="row">
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <Avatar src={item.PFP_Url} alt={item.Name} sx={{ mr: 2 }} />
                   {item.Name}
+                </div>
                 </TableCell>
                 <TableCell align="right">{item.Favorites}</TableCell>
                 <TableCell align="right">{item.Retweets}</TableCell>
