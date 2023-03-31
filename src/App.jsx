@@ -58,12 +58,6 @@ function CollapsibleTableRow(props) {
           <div style={{ textAlign: "right" }}>{item.Replies}</div>
         </div>
       </div>
-        {/* <div style={{ display: "grid", gridTemplateColumns: "1fr", alignItems: "right" }}>
-          <div style={{ marginBottom: "1rem", textAlign: "right" }}>Favorites: {item.Favorites}</div>
-          <div style={{ marginBottom: "1rem", textAlign: "right" }}>Retweets: {item.Retweets}</div>
-          <div style={{ marginBottom: "1rem", textAlign: "right" }}>Replies: {item.Replies}</div>
-        </div>
-      </div> */}
     </TableCell>
   </TableRow>
 )}
