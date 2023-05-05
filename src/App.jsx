@@ -31,8 +31,8 @@ function CollapsibleTableRow(props) {
           </div>
         </div>
       </TableCell>
-      <TableCell align="right">{item.Rank}</TableCell>
-      <TableCell align="right">{item.Global_Reach + "%"}</TableCell>
+      {/* <TableCell align="right">{item.Rank}</TableCell> */}
+      {/* <TableCell align="right">{item.Global_Reach + "%"}</TableCell> */}
       <TableCell align="right">{item.Impressions}</TableCell>
     </TableRow>
     {open && (
@@ -68,9 +68,10 @@ function CollapsibleTableRow(props) {
 
 function App() {
   const [data, setData] = useState([]);
+  // const [socket, setSocket] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      fetch('https://be-community-gamification.onrender.com/api/leaderboard/')
+      fetch('https://be-community-gamification.onrender.com/api/engagement/')
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -83,6 +84,27 @@ function App() {
 
     fetchData();
   }, []);
+  
+  // useEffect(() => {
+  //   const newSocket = new WebSocket("ws://red-cgl4c5u4dad69r5ov8b0::6379/ws/leaderboard_updates/");
+  
+  //   newSocket.onopen = () => {
+  //     console.log("WebSocket connection established.");
+  //     setSocket(newSocket);
+  //   };
+  
+  //   newSocket.onclose = () => {
+  //     console.log("WebSocket connection closed.");
+  //     setSocket(null);
+  //   };
+  
+  //   return () => {
+  //     if (socket !== null) {
+  //       socket.close();
+  //       setSocket(null);
+  //     }
+  //   };
+  // }, []);
 
   console.log(data);
 
@@ -99,8 +121,8 @@ function App() {
             <TableRow>
               <TableCell />
               <TableCell>Name</TableCell>
-              <TableCell align="right">Rank</TableCell>
-              <TableCell align="right">Global Reach</TableCell>
+              {/* <TableCell align="right">Rank</TableCell> */}
+              {/* <TableCell align="right">Global Reach</TableCell> */}
               <TableCell align='right'>Impressions</TableCell>
             </TableRow>
           </TableHead>
